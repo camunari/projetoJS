@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#evento1 
+        {
+            background: purple;
+            color: azure;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            
+            
+        }
+    </style>
+</head>
+<body> 
+    <div id="evento1"> <!--onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()"> div com um id e evento onclick-->
+        Interaja aqui!
+    </div>
+    <script>
+        var a = window.document.getElementById('evento1')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)             //podemos tratar os eventos no javascript diretamente com o addEventListener 
+        a.addEventListener('mouseleave', sair)                 // ou no HTML como no codigo comentado acima
+        function clicar() {
+        a.innerText = 'Clicou!'
+        a.style.background = 'black'
+        }
+        function entrar() {
+            a.innerText = 'Entrou'
+        }
+        function sair() {
+            a.innerText = 'Saiu'
+            a.style.background = 'purple'
+        }
+    </script>
+    
+</body>
+</html>

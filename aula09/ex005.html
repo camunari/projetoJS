@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body {
+            background-color: azure;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 12pt;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui temos o primeiro parágrafo</p>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+    <div class="primeira">Aqui temos a primeira DIV</div>
+    <div id="segunda">Aqui temos a segunda DIV</div>
+    <script>
+        
+        //SELECIONANDO POR TAGNAME
+        var d = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está é a mensagem que está dentro do parágrafo "p[0]": ' + d.innerText)
+        d.style.background = 'lightBlue'
+
+
+
+
+        //SELECIONANDO POR QUERYSELECTOR
+        var tt = window.document.querySelector('div.primeira') // com o querySelector devemos usar . para class e # para id
+        window.document.write('<br/> O que está dentro da classe "click": ' + tt.innerText) 
+        tt.style.background = 'pink'
+
+
+
+
+        
+        //SELECIONANDO POR ID
+        var ttt = window.document.getElementById('segunda')
+        window.document.write('<br/> O que está dentro do id "segunda": ' + ttt.innerText)
+        ttt.style.background = "beige"
+
+        
+    </script>
+</body>
+</html>

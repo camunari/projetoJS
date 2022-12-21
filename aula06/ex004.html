@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JavaScript</title>
+
+    <style>
+        body {
+            background-color: rgb(164, 187, 207);
+            font: normal 10pt Arial;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <script>
+
+        var nome = window.prompt('Digite seu nome: ')
+        document.write(`Seu nome é: ${nome} e possui ${nome.length} letras <br/>`) //document.write exibe o texto inserido no window.prompt no corpo da pagina
+        document.write(`Seu nome em lentras maiúsculas: ${nome.toLocaleUpperCase()} <br/>`) //para letras maisculas
+        document.write(`Seu nome em letras minúsculas: ${nome.toLocaleLowerCase()} <br/>`) //para letras minusculas
+
+        //COMANDO BONUS PARA UTILIZAR EM VALORES COM PONTO, DINHEIRO ETC (obs: usar o node no terminal pois na web nao está funcionando :( ))
+
+        var valor1 = window.prompt('Digite o valor do seu salário: ')
+        document.write(`O valor do seu salário em real formatado é: ${valor1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`)
+
+    </script>
+
+</body>
+</html>
